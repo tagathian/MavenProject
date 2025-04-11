@@ -9,9 +9,10 @@ pipeline
             {
                 steps{
                     echo " This is build stage"
+                    sh 'mvn clean package'
                 }
             }
-        stage('test')
+ /*       stage('test')
         {
             steps{
                 echo "This is testing phase"
@@ -23,5 +24,6 @@ pipeline
                 echo "This is Deploy phase"
             }
         }
+*/
     }
 }
