@@ -11,6 +11,9 @@ pipeline
                     echo " This is build stage"
                     sh 'mvn clean package'
                 }
+            post {
+                success {
+                    archiveArtifacts artifacts: '**/target/*.war'
             }
  /*       stage('test')
         {
