@@ -15,7 +15,7 @@ tools {
                 }
             post {
                 success {
-                    archiveArtifacts artifacts: '**/target/*.war'
+                    archiveArtifacts artifacts: '**/*.war'
             }
             }
             }
